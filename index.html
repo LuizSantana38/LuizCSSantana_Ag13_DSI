@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permite adaptação da página a diferentes telas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu portal de Entretenimento digital</title>
+
+    <!-- Primeiro: vincula o CSS Reset externo -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Segundo: CSS interno da página -->
+    <style>
+
+        /* Formatação geral do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8edf3;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* Cabeçalho principal */
+        header {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        /* Formatação do título */
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Área que contém as três colunas */
+        .container {
+            display: flex;
+
+            /* Organiza as colunas lado a lado */
+            flex-direction: row;
+
+            /* Distribui o espaço entre as colunas */
+            justify-content: space-around;
+
+            /* Permite que as colunas mudem de linha */
+            flex-wrap: wrap;
+
+            gap: 20px;
+            padding: 30px;
+        }
+
+        /* Formatação individual das colunas */
+        .coluna {
+            flex: 1 1 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+            /* Cria uma sombra ao redor das colunas */
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Títulos das categorias */
+        .coluna h2 {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        /* Formatação das imagens */
+        .coluna img {
+            width: 100%;
+            max-width: 300px;
+            height: 160px;
+
+            /* Mantém o preenchimento da imagem sem distorção */
+            object-fit: cover;
+
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Links das imagens */
+        .coluna a {
+            display: block;
+            text-decoration: none;
+        }
+
+        /* Efeito quando o mouse passa sobre as imagens */
+        .coluna img:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Adaptação para telas menores */
+        @media (max-width: 600px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Meu portal de Entretenimento digital</h1>
+        <p>Filmes, músicas e jogos em um só lugar!</p>
+    </header>
+
+    <!-- Área principal com as três colunas -->
+    <main class="container">
+
+        <!-- PRIMEIRA COLUNA: FILMES -->
+        <section class="coluna">
+
+            <h2>Filmes</h2>
+
+            <a href="https://www.netflix.com/br/"
+               target="_blank">
+                <img src="imagens/filmes1.jpg"
+                     alt="Portal de filmes Netflix">
+            </a>
+
+            <a href="https://www.primevideo.com/"
+               target="_blank">
+                <img src="imagens/filmes2.jpg"
+                     alt="Portal de filmes Prime Video">
+            </a>
+
+        </section>
+
+
+        <!-- SEGUNDA COLUNA: MÚSICAS -->
+        <section class="coluna">
+
+            <h2>Músicas</h2>
+
+            <a href="https://open.spotify.com/"
+               target="_blank">
+                <img src="imagens/musicas1.jpg"
+                     alt="Portal de músicas Spotify">
+            </a>
+
+            <a href="https://music.youtube.com/"
+               target="_blank">
+                <img src="imagens/musicas2.jpg"
+                     alt="Portal de músicas YouTube Music">
+            </a>
+
+        </section>
+
+
+        <!-- TERCEIRA COLUNA: JOGOS -->
+        <section class="coluna">
+
+            <h2>Jogos eletrônicos</h2>
+
+            <a href="https://store.steampowered.com/"
+               target="_blank">
+                <img src="imagens/jogos1.jpg"
+                     alt="Portal de jogos Steam">
+            </a>
+
+            <a href="https://www.xbox.com/pt-BR/"
+               target="_blank">
+                <img src="imagens/jogos2.jpg"
+                     alt="Portal de jogos Xbox">
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Meu portal de Entretenimento digital - 2026</p>
+    </footer>
+
+</body>
+</html>
